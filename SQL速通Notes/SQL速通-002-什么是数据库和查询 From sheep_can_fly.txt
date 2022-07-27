@@ -1,0 +1,79 @@
+笔记
+
+---------------
+
+数据库管理系统（Database Management System, DBMS）是一种操纵和管理数据库的软件，由一套复杂组件协同工作，用于建立、使用和维护数据库。
+
+
+
+数据库引擎（Database Engine）是用于存储、处理和保护数据的核心组件。由编程语言对Database Engine下达命令。常见的语言：SQL.
+
+
+
+结构化查询语言（Structured Query Language, SQL）是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统。SQL有国际标准，但各厂商在标准基础上额外添加了一些自己独特的功能，不同厂商的SQL会有些许不同。就比如微软的SQLServer用的是T-SQL（T指Transaction）。
+
+
+
+C/S架构（Client-Server）这种架构的软件有服务器和客户端，服务器负责数据的管理，客户端来完成与用户的交互任务。
+
+
+
+图形用户界面（Graphical User Interface, GUI, 图形用户接口）GUI['guːi]指采用图形方式显示的计算机操作用户界面。
+
+
+
+命令行界面（Command-Line interface, CLI）。
+
+
+
+SQL的客户端是SQL Server Management Studio, SSMS.
+
+MySQL的客户端是MySQL Workbench.
+
+
+
+一个原则：不论用户的反馈是成功还是失败，正确还是错误，都必须返还给用户一个反馈。
+
+
+
+用户怎样操作数据库：| 用户 --操作--> Client --指示--> Server --查询--> 数据库 |
+
+
+
+数据库（Database）是按照数据结构来存储、组织和管理数据的仓库。是一个储存在计算机内的，有组织，统一管理的大量数据的集合。Database由DatabaseEngine管理。
+
+
+
+数据库的类别：关系型数据库（Relational Database）和非关系型数据库。
+
+
+
+RelationalDatabase受到预设关系的约束。常常使用在对数据完整性要求比较高的应用上。Ex: Bank；Market.
+
+
+
+文档型数据库（Document Database）：用作管理文档（记录）。在RelationalDatabase中，信息被分割成离散的数据段。而在DocumentDatabase中，文档是处理信息的基本单位。一个文档可以很长，很复杂，也可以无结构，就像文档一样。
+
+
+
+DocumentDatabase常常应用于Bigdata的存储和处理。Ex: Ads.
+
+
+
+我们正在学习的数据库是一种RalationalDatabase。
+
+
+
+对数据进行ETL（Extract-Transform-Load）是一个数据工程师经常干的事。Extract：抽取数据；Transform：整理，变型，打塔马杀鸡（笑；Load装载，将数据包装给下游的数据分析师、数据科学家。
+
+
+
+对数据库查询（Query）也指访问数据库。也就是通过客户端向BDMS问询数据库中的数据。
+
+
+
+查询这一行动包含了四个行为，分别是：增、删、查、改，其中只有“查”不对文件做出改动。在英文中这四个行为被称作（CRUD）C: Create[增]；R: Read[查]；U: Update[改]；D: Delete[删]。
+
+
+
+20200721谢谢提摩太老师。 作者：sheep_can_fly https://www.bilibili.com/read/cv17678125?from=note 出处：bilibili
