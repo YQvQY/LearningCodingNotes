@@ -1,0 +1,84 @@
+What is a table?
+表是什么？
+Tables are database objects that contain all the data in a database.
+
+表是包含数据库中所有数据的数据库对象。
+
+In tables, data is logically organized in a row-and-column format.
+
+在表中，数据被有序地排列成行和列的形式。
+
+Each row represents a unique record.
+
+每一行展现了一个独一无二的记录。
+
+Each column represents a field in the record.
+
+每一列展现了记录中的字段。行的“唯一性”由主键（primary key）来保证。
+
+
+
+What is a view?
+视图是什么？
+A view is a virtual table whose contents are defined by a query.
+
+视图是一张虚拟的表，其中信息被查询所定义。
+
+A view acts as a filter on the underlying tables.
+
+视图充当基础表的过滤器。
+
+
+
+table_or_view_name
+Is the name of a table or view.
+
+table_or_view_name是表或视图的名称。
+
+
+
+derived_table
+派生表
+Is a subquery that retries rows from the database.
+
+派生表是一个子查询，对数据库中的行进行重操作。
+
+derived_table is used as input to the outer query.
+
+派生表用作外部查询的输入。
+
+
+
+在客户端由SELECT语句运行后呈现出来的表格不是表，而是客户端收集数据后，由表格的形式展现出来，这种表格并不是表。
+
+
+
+“表”是一个抽象概念，为了贴合人类的逻辑思想，表中的数据以具有行列的表格形式为人类呈现出来。但在物理层面上来看，表作为硬盘中的文件，为了更加高效地对文件进行读取，表并非是以行和列的形式进行存储。
+
+
+
+行的独一性：每一行都记录了一个独一无二的人，而每个独一无二的人都有独一无二的信息。在一行中，一个独一无二的信息被保存为一个字段。在一张表中，所有行的同一个字段的集合构成了一列。行和列相交的地方是这一行的一个字段。行是独一无二的，但列却不是，因为两个独一无二的个体可能拥有一些相同点。
+
+
+
+derived_table和view的转换关系：derived_table常常用在临时、不常用的子查询中。倘若一个子查询非常常用，经常被拿来当作其他查询的输入数据，可将这个子查询固化为一个view。
+
+
+derived_table实践
+
+SELECT Person.FirstName, Person.MiddleName, Person.LastName
+FROM Person.Person
+        得到的结果等同于：
+
+SELECT P.FirstName, P.MiddleName, P.LastName
+FROM Person.Person AS P
+        只不过第二组代码给表赋予了一个别名“P”。
+
+
+
+SELECT * FROM
+(SELECT FirstName, MiddleName, LastName
+FROM Person.Person) AS PersonName
+        上面这一组代码，括号起始一直到后面的AS语句的作用是：在Person.Person中选取三列，成为一个名叫PersonName的虚拟表。
+
+        代码开头的SELECT * FROM就是指读取这个名叫PersonName的虚拟表中的所有列。 作者：sheep_can_fly https://www.bilibili.com/read/cv17969269 出处：bilibili
