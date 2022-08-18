@@ -8,6 +8,8 @@
   - SQL速通-003-小查询里有故事
   - SQL速通-004-万变不离其宗
   - SQL速通-005-数据从何而来
+  - SQL速通-006-给数据做个按摩
+  - SQL速通-007-源数据的筛选及CTE
 - Python 
 - JavaScript
 - Shell/Powershell
