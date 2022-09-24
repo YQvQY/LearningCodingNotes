@@ -12,6 +12,8 @@
   - SQL速通-007-源数据的筛选及CTE
   - SQL速通-007.001-神隐的布尔类型
   - SQL速通-007.002-数据的比较
+  - SQL速通-007.003-字符串的筛选
+
 - Python 
 - JavaScript
 - Shell/Powershell
